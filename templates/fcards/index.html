@@ -1,0 +1,22 @@
+<html>
+<h1>Home</h1>
+
+		{% if user.is_authenticated %}
+			<li><a href="/fcards/edit/">Edit Profile</a></li>
+			<li><a href="/fcards/view/{{user.username}}">View Profile</a></li>
+			<li><a href="/fcards/logout/">Logout</a></li>
+
+			First
+			{{ sets}}
+
+			{% for s in sets %}
+				<li><a href="/fcards/{{s.name}}">{{ s.name }}</a></li>
+				
+			{% endfor %}
+
+		{% else %}
+			<li><a href="/fcards/login/">Login</a></li>
+			<li><a href="/fcards/register/">Register</a></li>
+		{% endif %}
+
+</html>

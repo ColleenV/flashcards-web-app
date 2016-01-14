@@ -1,0 +1,15 @@
+<h1>Create</h1>
+
+
+        <form id="term_form" method="post" >
+
+            {% csrf_token %}
+            {{ sform.as_p }}
+            {{ form.as_p }}
+            
+            
+           
+            <input type="submit" name="submit" value="Create" />
+        </form>
+            <button><a href="javascript:history.go(-1)" 
+           data-role="button" style="text-decoration:none">Cancel</a></button>

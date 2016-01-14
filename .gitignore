@@ -1,0 +1,5 @@
+.project
+.pydevproject
+./fcards/migrations
+db.sqlite3
+*.py[cod]

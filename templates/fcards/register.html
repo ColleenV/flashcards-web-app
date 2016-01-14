@@ -1,0 +1,18 @@
+<h1>Register</h1>
+{% if registered %}
+        <strong><center>Thank you for registering!</center></strong><br>
+        <center><a href="/fcards/" style="text-decoration:none"><font color="ff656c">Return to the homepage</font></a></center>
+        {% else %}
+
+        <form id="user_form" method="post" action="/fcards/register/"
+                enctype="multipart/form-data">
+
+            {% csrf_token %}
+            {{ user_form.as_p }}
+
+            <!-- Provide a button to click to submit the form. -->
+            <input type="submit" name="submit" value="Register" />
+        </form>
+            <button><a href="javascript:history.go(-1)" 
+           data-role="button" style="text-decoration:none"><font color="white">Cancel</font></a></button>
+        {% endif %}
